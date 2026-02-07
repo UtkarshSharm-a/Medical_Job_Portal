@@ -1,187 +1,201 @@
-# AI assisted development
+AI-Assisted Development
+🏥 MedExJob.com – Medical Job Portal
+📖 Project Overview
 
-# MedExJob.com - Medical Job Portal
+MedExJob.com is a comprehensive medical job portal that connects healthcare professionals with employers. The platform enables job discovery, recruitment, and secure communication within the healthcare ecosystem.
 
-## 📖 Project Overview
-
-MedExJob.com एक comprehensive medical job portal है जो healthcare professionals और employers को connect करता है।
-
-## 🏗️ Project Structure
-
-```
+🏗️ Project Structure
 MedExJobUpdated/
 ├── backend/          # Spring Boot Backend API (Java)
 ├── frontend/         # React + TypeScript Frontend (Vite)
-├── deployment/       # Deployment scripts और guides
-└── README.md         # यह file
-```
+├── deployment/       # Deployment scripts and guides
+└── README.md         # Project documentation
 
-## 🚀 Quick Start (Local Development)
+🚀 Quick Start (Local Development)
+Option 1: Quick Start Script (Recommended)
 
-### Option 1: Quick Start Script (Recommended)
+Windows
 
-**Windows:**
-
-```powershell
 .\start-local.ps1
-```
 
-**Linux/Mac:**
 
-```bash
+Linux / Mac
+
 chmod +x start-local.sh
 ./start-local.sh
-```
 
-### Option 2: Manual Setup
-
-#### 1. Database Setup
-
-```sql
+Option 2: Manual Setup
+1️⃣ Database Setup
 CREATE DATABASE medtech_db;
-```
 
-#### 2. Backend Setup
-
-```bash
+2️⃣ Backend Setup
 cd backend
 mvn clean install
 mvn spring-boot:run
-```
 
-✅ Backend: http://localhost:8081
 
-#### 3. Frontend Setup (नई Terminal में)
+✅ Backend URL:
+👉 http://localhost:8081
 
-```bash
+3️⃣ Frontend Setup (Open a new terminal)
 cd frontend
 npm install
 npm run dev
-```
 
-✅ Frontend: http://localhost:5173
 
-## 📋 Detailed Setup Guides
+✅ Frontend URL:
+👉 http://localhost:5173
 
-- **[LOCAL_SETUP.md](./LOCAL_SETUP.md)** - Complete local development guide
-- **[QUICK_START.md](./QUICK_START.md)** - Quick reference guide
-- **[SETUP_CHECKLIST.md](./SETUP_CHECKLIST.md)** - Setup checklist
+📋 Detailed Setup Guides
 
-## 🛠️ Tech Stack
+LOCAL_SETUP.md – Complete local development guide
 
-### Backend
+QUICK_START.md – Quick reference guide
 
-- **Java 17**
-- **Spring Boot 3.2.0**
-- **Spring Security** (JWT Authentication)
-- **Spring Data JPA**
-- **MySQL 8.0**
-- **Maven**
+SETUP_CHECKLIST.md – Setup checklist and common issues
 
-### Frontend
+🛠️ Tech Stack
+Backend
 
-- **React 18**
-- **TypeScript**
-- **Vite**
-- **Tailwind CSS**
-- **Radix UI**
-- **React Router**
+Java 17
 
-## 📁 Important Files
+Spring Boot 3.2.0
 
-### Backend Configuration
+Spring Security (JWT Authentication)
 
-- `backend/src/main/resources/application.yml` - Main configuration
-- `backend/pom.xml` - Maven dependencies
+Spring Data JPA
 
-### Frontend Configuration
+MySQL 8.0
 
-- `frontend/vite.config.ts` - Vite configuration
-- `frontend/package.json` - npm dependencies
+Maven
 
-## 🔧 Configuration
+Frontend
 
-### Database
+React 18
 
-- **Database Name**: `medtech_db`
-- **Port**: 3306 (MySQL default)
-- **Credentials**: `backend/src/main/resources/application.yml` में update करें
+TypeScript
 
-### Ports
+Vite
 
-- **Backend**: 8081
-- **Frontend**: 5173
-- **MySQL**: 3306
+Tailwind CSS
 
-## ✅ Verification
+Radix UI
 
-### Backend Health Check
+React Router
 
-```
+📁 Important Files
+Backend Configuration
+
+backend/src/main/resources/application.yml – Main configuration
+
+backend/pom.xml – Maven dependencies
+
+Frontend Configuration
+
+frontend/vite.config.ts – Vite configuration
+
+frontend/package.json – npm dependencies
+
+🔧 Configuration
+Database
+
+Database Name: medtech_db
+
+Port: 3306 (MySQL default)
+
+Credentials: Update in
+backend/src/main/resources/application.yml
+
+Ports
+Service	Port
+Backend	8081
+Frontend	5173
+MySQL	3306
+✅ Verification
+Backend Health Check
 http://localhost:8081/api/actuator/health
-```
 
-Expected: `{"status":"UP"}`
 
-### Frontend
+Expected Response
 
-```
+{"status":"UP"}
+
+Frontend
 http://localhost:5173
-```
 
-Expected: Homepage loads successfully
 
-## 🐛 Troubleshooting
+Expected Result: Homepage loads successfully.
 
-Common issues और solutions के लिए **[SETUP_CHECKLIST.md](./SETUP_CHECKLIST.md)** देखें।
+🐛 Troubleshooting
 
-## 📦 Production Build
+For common issues and solutions, refer to SETUP_CHECKLIST.md.
 
-### Backend
-
-```bash
+📦 Production Build
+Backend
 cd backend
 mvn clean package
-# JAR: target/medexjob-backend-1.0.0.jar
-```
 
-### Frontend
 
-```bash
+📦 JAR output:
+
+target/medexjob-backend-1.0.0.jar
+
+Frontend
 cd frontend
 npm run build
-# Build files: dist/
-```
 
-## 🚀 Deployment
 
-Hostinger पर deploy करने के लिए `deployment/` folder देखें।
+📦 Build output:
 
-## 📝 Development Workflow
+dist/
 
-1. **Local Development**: इस guide का follow करें
-2. **Testing**: सभी features locally test करें
-3. **Production Build**: Build commands use करें
-4. **Deployment**: `deployment/` folder में guides follow करें
+🚀 Deployment
 
-## 🔐 Security Notes
+For deployment on Hostinger, refer to the guides inside the deployment/ folder.
 
-- JWT secret production में change करें
-- Database credentials secure रखें
-- Environment variables use करें production के लिए
+📝 Development Workflow
 
-## 📞 Support
+Local Development – Follow this guide
 
-Issues के लिए:
+Testing – Test all features locally
 
-1. Logs check करें: `backend/logs/medexjob.log`
-2. Browser console check करें (F12)
-3. Backend terminal में errors देखें
+Production Build – Use build commands
 
-## 📄 License
+Deployment – Follow deployment guides
+
+🔐 Security Notes
+
+Change JWT secret in production
+
+Keep database credentials secure
+
+Use environment variables for production configuration
+
+📞 Support & Debugging
+
+If you face issues:
+
+Check backend logs:
+backend/logs/medexjob.log
+
+Check browser console (F12)
+
+Check backend terminal for errors
+
+📄 License
 
 This project is licensed under the MIT License.
 
----
+🎉 Happy Coding!
 
-**Happy Coding! 🎉**
+If you want, I can:
+
+Make this more recruiter-friendly
+
+Add architecture diagram section
+
+Add API documentation section
+
+Optimize it for GitHub stars & open-source look
+
+Just tell me 😄
